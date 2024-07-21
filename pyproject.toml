@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "documentation-portal"
+version = "0.1.0"
+description = ""
+authors = ["Jonathan Leeming <jonathan@leeming.dev>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typst = "^0.11.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

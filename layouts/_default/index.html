@@ -1,0 +1,17 @@
+{{ define "head" }}
+    <link rel="stylesheet" href="/css/index.css">
+{{ end }}
+
+{{ define "main" }}
+    {{ .Content }}
+
+    <nav role="doc-pagelist" class="pages">
+        <ul>
+        {{ range .Pages }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+        </ul>
+    </nav>
+{{ end }}

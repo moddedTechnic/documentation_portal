@@ -1,0 +1,38 @@
+{{ define "head" }}
+    <link rel="stylesheet" href="/css/document.css">
+{{ end }}
+
+{{ define "main" }}
+    <main>
+        <h1>{{ .Title }}</h1>
+
+        {{ with .Params.Author }}
+            {{ if gt (len .) 2 }}
+                <p>By {{ delimit . ", " ", and " }}</p>
+            {{ else }}
+                <p>By {{ delimit . " and " }}</p>
+            {{ end }}
+        {{ end }}
+
+        <a href="{{ .Params.Path }}" class="download">
+            <img src="/icons/download.svg" alt="">
+            Download
+        </a>
+
+        <iframe src="{{ .Params.Path }}" class="viewer"></iframe>
+
+        {{ if or .PrevInSection .NextInSection }}
+            <nav class="similar">
+                {{ with .PrevInSection }}
+                    <a href="{{ .RelPermalink }}" class="previous-link">Previous: {{ .Title }}</a>
+                {{ end }}
+
+                <div class="spacer"></div>
+
+                {{ with .NextInSection }}
+                    <a href="{{ .RelPermalink }}" class="next-link">Next: {{ .Title }}</a>
+                {{ end }}
+            </nav>
+        {{ end }}
+    </main>
+{{ end }}
