@@ -4,7 +4,7 @@ A modern portal for legal and administrative documentation.
 
 Managed via git. Built on Hugo and Typst.
 
-**Note**: This portal should not be used for sensitive documentation. **NO** authentication is provided.
+**Note**: This portal should not be used for sensitive documentation on the public internet. **NO** authentication is provided.
 
 
 ## Usage
