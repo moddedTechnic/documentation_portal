@@ -6,7 +6,7 @@ authors = ["Jonathan Leeming <jonathan@leeming.dev>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 typst = "^0.11.1"
 
 
